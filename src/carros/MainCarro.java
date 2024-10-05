@@ -1,3 +1,5 @@
+package carros;
+
 import java.util.Scanner;
 
 public class MainCarro {
