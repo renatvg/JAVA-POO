@@ -9,17 +9,18 @@ public class Main {
         Conta contaCleinte01 = new Conta(cliente01, 1000, 50d);
 
         Cliente fulano = new Cliente();
-        fulano.nome = "JOao da Silva";
-        cliente01.cpf = "12341234542";
+        fulano.setNome("JOao da Silva");
+        cliente01.setCpf("12341234542");
 
         Conta contaFulando = new Conta(fulano, 1001, 0);
         contaFulando.titular = cliente01;
         contaFulando.numeroconta = 1001;
-        contaFulando.modificarSaldo(30);
+        contaFulando.setSaldo(30);
 
         Banco sistemaBancario = new Banco();
 
-        System.out.println("O saldo da conta " + contaCleinte01.numeroconta + " é de: R$" + contaFulando.mostrarSaldo()) ;
+        System.out.println("O nome do dono da conta 1000 é "  + cliente01.getNome());
+        System.out.println("O saldo da conta " + contaCleinte01.numeroconta + " é de: R$" + contaFulando.getSaldo()) ;
         System.out.println("Por favor digite o valor que quer depositar: ");
         sistemaBancario.depositar(contaCleinte01, teclado.nextDouble());
 
@@ -32,5 +33,6 @@ public class Main {
 
         contaFulando.imprimirSaldo();
         contaCleinte01.imprimirSaldo();
+        System.out.println("A quantidade de clientes é: " + Cliente.quantidadeClientes);
     }
 }

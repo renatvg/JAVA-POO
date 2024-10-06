@@ -9,7 +9,7 @@ public class Conta {
         System.out.println("Seu saldo até o momento é de: "+ this.saldo);
     }
 
-    public void modificarSaldo (double saldo) {
+    public void setSaldo(double saldo) {
         if (saldo >=  0) {
         this.saldo = saldo;
         }else {
@@ -17,7 +17,7 @@ public class Conta {
         }
     }
 
-    public double mostrarSaldo() {
+    public double getSaldo() {
         return this.saldo;
     }
 
@@ -27,7 +27,23 @@ public class Conta {
         this.numeroconta = numeroconta;
         if (saldo >= 0){
             this.saldo = saldo;
-        }
+         }
+    }
+
+    public Cliente getTitular() {
+        return titular;
+    }
+
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
+    }
+
+    public int getNumeroconta() {
+        return numeroconta;
+    }
+
+    public void setNumeroconta(int numeroconta) {
+        this.numeroconta = numeroconta;
     }
 }
 
